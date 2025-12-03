@@ -88,5 +88,6 @@ Optional:
 
 Windows users need <conio.h> (handled with #ifdef _WIN32).
 
-🧑‍💻 Authors
+🧑‍💻 Author
+
 Made by Shashank, Sumit Rai.

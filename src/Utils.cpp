@@ -1,26 +1,40 @@
 #include "../include/Utils.h"
 #include <cstdlib>
 
-/*
- * Clears the console screen.
- * Uses "cls" for Windows terminals.
+/* ------------------- Clear Screen ------------------------- */
+/**
+ * Input: None
+ * Output: Clears the console screen
+ * Approach:
+ *   - Executes system command "cls" on Windows
+ * Side Effects:
+ *   - Clears the terminal window
  */
 void clearScreen() {
     system("cls");
 }
 
-/*
- * Returns a random index between 0 and 3.
- * Used for selecting random board positions.
+/* ------------------- Random Index ------------------------- */
+/**
+ * Input: None
+ * Output: Returns a random integer between 0 and 3
+ * Approach:
+ *   - Uses rand() % 4 to select a valid board index
+ * Side Effects:
+ *   - None
  */
 int randomIndex() {
     return rand() % 4;
 }
 
-/*
- * Returns a new tile value.
- *  - 90% chance: 2
- *  - 10% chance: 4
+/* ------------------- New Tile Value ------------------------- */
+/**
+ * Input: None
+ * Output: Returns 2 (90% chance) or 4 (10% chance)
+ * Approach:
+ *   - Uses rand() % 10 to implement probability
+ * Side Effects:
+ *   - None
  */
 int newTileValue() {
     return (rand() % 10 == 0) ? 4 : 2;
