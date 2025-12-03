@@ -20,21 +20,7 @@ This project uses clean object-oriented design with separate files for **Game**,
 
 ---
 
-## 📁 Project Structure
 
-project/
-│
-├── include/
-│ ├── Game.h
-│ ├── Board.h
-│ └── Utils.h
-│
-├── src/
-│ ├── Game.cpp
-│ ├── Board.cpp
-│ └── Utils.cpp
-│
-└── main.cpp
 
 
 ---
