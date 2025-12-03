@@ -111,12 +111,13 @@ bool Board::hasEmptyCell() const {
  */
 bool Board::isGameOver() const {
     if(hasEmptyCell()) return false;
-
+    //checks for merging/sliding in horizontal
     for(int i = 0; i < 4; i++)
-        for(int j = 0; j < 3; j++)
-            if(grid[i][j] == grid[i][j+1])
-                return false;
-
+    for(int j = 0; j < 3; j++)
+    if(grid[i][j] == grid[i][j+1])
+    return false;
+    
+    //checks for merging/sliding in vertical
     for(int j = 0; j < 4; j++)
         for(int i = 0; i < 3; i++)
             if(grid[i][j] == grid[i+1][j])

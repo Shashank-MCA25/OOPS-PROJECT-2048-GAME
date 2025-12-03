@@ -14,7 +14,12 @@
  * Side Effects:
  *   - Modifies grid, score, and steps
  */
-class Board {
+class Board
+{
+private:
+    int grid[4][4]; ///< Stores tile values
+    int score;      ///< Tracks score
+    int steps;      ///< Tracks moves
 public:
     /**
      * @brief Constructs a new Board object.
@@ -63,26 +68,21 @@ public:
 
     /* ---------------- Movement Functions ---------------- */
 
-    void moveLeft();   ///< Input: None, Output: board moves left, Side Effects: grid, score, steps
-    void moveRight();  ///< Moves right
-    void moveUp();     ///< Moves up
-    void moveDown();   ///< Moves down
-
-private:
-    int grid[4][4]; ///< Stores tile values
-    int score;      ///< Tracks score
-    int steps;      ///< Tracks moves
+    void moveLeft();  ///< Input: None, Output: board moves left, Side Effects: grid, score, steps
+    void moveRight(); ///< Moves right
+    void moveUp();    ///< Moves up
+    void moveDown();  ///< Moves down
 
     /* ---------------- Internal Helpers ---------------- */
 
-    void mergeLeft();   ///< Merges tiles left
-    void slideLeft();   ///< Slides tiles left
-    void mergeRight();  ///< Merges tiles right
-    void slideRight();  ///< Slides tiles right
-    void mergeUp();     ///< Merges tiles up
-    void slideUp();     ///< Slides tiles up
-    void mergeDown();   ///< Merges tiles down
-    void slideDown();   ///< Slides tiles down
+    void mergeLeft();          ///< Merges tiles left
+    void slideLeft();          ///< Slides tiles left
+    void mergeRight();         ///< Merges tiles right
+    void slideRight();         ///< Slides tiles right
+    void mergeUp();            ///< Merges tiles up
+    void slideUp();            ///< Slides tiles up
+    void mergeDown();          ///< Merges tiles down
+    void slideDown();          ///< Slides tiles down
     bool hasEmptyCell() const; ///< Checks for empty tiles
 };
 
